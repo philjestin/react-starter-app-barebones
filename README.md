@@ -1,4 +1,4 @@
-# React Start App Barebones Edition
+# React Starter App Barebones Edition
 Just a repo of the kind of stuff I want when starting a react app.
 
 ## Getting Started
