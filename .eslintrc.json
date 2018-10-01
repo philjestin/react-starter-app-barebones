@@ -8,28 +8,23 @@
   "parser": "babel-eslint",
   "extends": [
     "airbnb",
-    "eslint:recommended",
-    "plugin:react/recommended"
+   "eslint:recommended",
+   "plugin:react/recommended"
   ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "experimentalDecorators": true,
-      "jsx": true
-    },
-    "sourceType": "module"
-  },
   "globals": {
+    "describe": true,
+    "jest": true,
+    "it": true,
+    "expect": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "window": true,
+    "localStorage": true,
+    "crypto": true,
+    "document": true,
+    "URLSearchParams": true,
+    "XMLHttpRequest": true,
     "jestExpect": true
-  },
-  "plugins": [
-    "react",
-    "babel"
-  ],
-  "settings": {
-    "react": {
-      "pragma": "react"
-    }
   },
   "rules": {
     "indent": [
@@ -43,24 +38,24 @@
         ]
       }
     ],
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"],
-    "react/jsx-indent-props": 0,
-    "react/prop-types": [1, {
-      "ignore": [
-        "classes",
-        "children"
-      ]
-    }],
-    "react/no-array-index-key": 0,
-    "react/forbid-prop-types": 0,
-    "react/jsx-filename-extension": 0,
-    "react/jsx-uses-react": 0,
-    "react/jsx-uses-vars": 0,
-    "react/react-in-jsx-scope": 0,
-    "react/no-depcrecated": 0,
-    "import/no-unresolved": 0,
-    "import/extensions": 0
+    "import/no-named-default": [0],
+    "react/jsx-tag-spacing": [0],
+    "react/no-array-index-key": [0],
+    "react/require-default-props": [0],
+    "no-underscore-dangle": [0],
+    "react/forbid-prop-types": [0],
+    "import/extensions": [0],
+    "arrow-parens": [0],
+    "import/prefer-default-export": [0],
+    "no-confusing-arrow": [0],
+    "jsx-a11y/label-has-for": [0],
+    "import/no-named-as-default": [0],
+    "import/no-extraneous-dependencies": [0],
+    "jsx-a11y/no-static-element-interactions": [0],
+    "jsx-a11y/no-noninteractive-element-interactions": [0],
+    "linebreak-style": [0],
+    "no-param-reassign": [0],
+    "no-debugger": "warn",
+    "jsx-a11y/media-has-caption": "off"
   }
 }

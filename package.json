@@ -3,9 +3,8 @@
   "version": "0.0.1",
   "description": "New project for postsales work done in react.",
   "main": "index.js",
-  "author": "Phil Middleton",
+  "authors": "Phil Middleton",
   "license": "MIT",
-  "private": true,
   "engine": {
     "node": ">=8.11.1"
   },
@@ -16,8 +15,9 @@
     "test": "jest",
     "storybook": "start-storybook -p 9002 -c .storybook"
   },
+  "eslintConfig": "./.eslintrc.json",
   "jest": {
-    "setupTestFrameworkScriptFile": ".scripts/setup-test-framework.js",
+    "setupTestFrameworkScriptFile": "./scripts/setup-test-framework.js",
     "moduleFileExtensions": [
       "js",
       "jsx"
@@ -27,7 +27,7 @@
       "src"
     ],
     "moduleNameMapper": {
-      "\\.css": "identity-obj-proxy"
+      "\\.scss": "identity-obj-proxy"
     }
   },
   "dependencies": {
@@ -80,10 +80,12 @@
     "babel-eslint": "^10.0.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-runtime": "^6.26.0",
     "chai": "^4.2.0",
     "chai-enzyme": "^1.0.0-beta.1",
     "css-loader": "^1.0.0",
+    "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -96,6 +98,7 @@
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "immutable-devtools": "^0.1.3",
+    "jest": "^23.6.0",
     "node-sass": "^4.9.3",
     "react-test-renderer": "^16.5.2",
     "redux-devtools": "^3.4.1",
