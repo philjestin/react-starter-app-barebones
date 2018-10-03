@@ -25,7 +25,6 @@ To run on your computer
 To run on your computer
 
 * `brew install yarn`
-* `git clone ssh://git@bitbucket.associatesys.local/ims/react-postsales.git`
 * `yarn install`
 * `yarn start`
 
