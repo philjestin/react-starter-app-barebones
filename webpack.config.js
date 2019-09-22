@@ -6,41 +6,37 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: './src/index.html',
-  filename: './index.html',
+  filename: './index.html'
 });
 
 module.exports = {
   entry: {
-    index: './src/index.jsx',
+    index: './src/index.jsx'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: isDevelopment 
-      ? '[name].bundle.js'
-      : '[name].bundle-[hash:6].js',
+    filename: isDevelopment ? '[name].bundle.js' : '[name].bundle-[hash:6].js',
     chunkFilename: isDevelopment
       ? '[name].bundle.js'
-      : '[name].bundle-[hash:6].js',
+      : '[name].bundle-[hash:6].js'
   },
-  devtool: isDevelopment
-    ? 'eval-source-map'
-    : 'source-map',
+  devtool: isDevelopment ? 'eval-source-map' : 'source-map',
   devServer: {
     inline: true,
     contentBase: './public',
     port: 9001,
-    historyApiFallback: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader'], // 'eslint-loader'],
+        use: ['babel-loader'] // 'eslint-loader'],
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss)|(css)$/,
         use: [
           {
             loader: 'style-loader'
@@ -70,19 +66,19 @@ module.exports = {
           name: 'static/media/[name].[hash:8].[ext]'
         }
       }
-    ],
+    ]
   },
   plugins: [
     htmlWebpackPlugin,
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      },
-    }),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      }
+    })
   ],
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.json']
   },
   optimization: {
     splitChunks: {
@@ -93,6 +89,6 @@ module.exports = {
           priority: 1
         }
       }
-    },
+    }
   }
 };

@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -5,35 +6,28 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 // Pages
-import Summary from './Summary';
+import Home from './Home';
 
-// Navigation
-import Navigation from './Navigation';
-
-import Footer from './Footer';
-
-const Router = ({ component: Component, ...rest}) => (
+const Router = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={renderProps => (
       <>
-        <Navigation />
         <Component {...renderProps} />
-        <Footer />
       </>
     )}
   />
 );
 
 Router.propTypes = {
-  component: PropTypes.func.isRequired,
+  component: PropTypes.func.isRequired
 };
 
 const Container = () => (
   <>
     <BrowserRouter>
       <Switch>
-        <Router path="/" component={Summary} />
+        <Router path='/' component={Home} />
       </Switch>
     </BrowserRouter>
   </>
